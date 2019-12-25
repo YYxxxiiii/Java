@@ -1,6 +1,6 @@
 public class Text3{
     public static void main(String[] args) {
-        int[] arr={10,20};
+        int[] arr = {10,20};
         swap(arr);
         System.out.println("a = "+arr[0]+",b = "+arr[1]);
     }

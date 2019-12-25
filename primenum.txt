@@ -1,0 +1,21 @@
+import java.util.Scanner;
+public class Textx{
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        int a = scan.nextInt();
+        boolean flag = true;
+        for(int i = 2;i<a-1;i++) {
+            if(a%i == 0) {
+            flag = false;
+            break;
+            }
+        }
+
+            if(flag && a != 1){
+                System.out.println("是素数");
+            }else{
+                System.out.println("不是素数");
+            }
+        }
+    }
+}
