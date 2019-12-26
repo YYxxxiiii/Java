@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class Textt{
+    public static void main(String[] args) {
+        System.out.println("请输入一个整数:");
+        Scanner scan = new Scanner(System.in);
+        int num1 = scan.nextInt();
+        System.out.println("请输入另一个整数:");
+        int num2 = scan.nextInt();
+        int min = num1;
+        int i = 1;
+        if(num1 < num2){
+            min = num1;
+        }else{
+            min = num2;
+        }
+        for(i = min;i >= 1;i--){
+            if(num1 % i == 0 && num2 % i == 0){
+                System.out.println("最大公约数是:" + i);
+                break;
+            }
+        }
+    }
+}
