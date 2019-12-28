@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class Textx{
+    public static void main(String[] args) {
+        System.out.println("请输入一个整数:");
+        Scanner scan = new Scanner(System.in);
+        int n = scan.nextInt();
+        helper(n);
+        System.out.println(helper(n));
+    }    
+        public static int helper(int n){
+            int flag = 1;
+            int count = 0;
+            while(flag <= n){
+                if((n & flag) != 0)
+                    count++;
+                flag = flag<<1;
+            }
+            return count;
+        }
+}
