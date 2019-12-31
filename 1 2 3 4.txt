@@ -1,0 +1,15 @@
+public class Text {
+    public static void main(String[] args){
+        int x = 1234;
+        print(x);
+    }
+
+    public static void print(int x) {
+        if (x < 10) {
+            System.out.print(x + " ");
+        }else {
+            print(x / 10);
+            System.out.print(x % 10 + " ");
+        }
+    }
+}
