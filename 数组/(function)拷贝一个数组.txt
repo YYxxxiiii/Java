@@ -1,0 +1,19 @@
+import java.util.Arrays;
+
+public class Text{
+    public static void main(String[] args) {
+        int[] arr = {1,2,3,4,5};
+        String newArr = Arrays.toString(copyOf(arr));
+        System.out.println(newArr);
+
+    }
+    public static int[] copyOf(int[] arr){
+        int[] ret = new int[arr.length];
+        for(int i = 0;i < arr.length;i++){
+            ret[i] = arr[i];
+        }
+        return ret;
+    }
+}
+
+//拷贝完,输出的时候还是得转成字符串输出

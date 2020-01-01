@@ -1,0 +1,19 @@
+public class Text{
+    public static void main(String[] args) {
+        int[] arr = {1,2,3,4,5};
+        System.out.println(toString(arr));
+    }
+    public static String toString(int[] arr){
+        String ret = "[";
+        for(int i = 1;i < arr.length;i++) {
+            ret += i;
+            if (i != arr.length - 1) {
+                ret += ",";
+            }
+        }
+        ret += "]";
+        return ret;
+    }
+}
+
+//返回值类型是String
