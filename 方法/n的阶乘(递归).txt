@@ -1,0 +1,15 @@
+import java.util.Scanner;
+
+public class Text{
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        int x = scan.nextInt();
+        System.out.println(fac(x));
+    }
+    public static int fac(int x){
+        if(x == 1){
+            return 1;
+        }
+        return x * fac(x-1);
+    }
+}
