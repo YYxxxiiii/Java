@@ -68,4 +68,47 @@ public class SeqList {
         }
         return false;
     }
+
+    public int search(int toFind) {  //某个元素的下标
+        for (int i = 0; i < size; i++) {
+            if(datas[i] == toFind){
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    public int getPos(int pos) {  //某下标下的数的值
+        return datas[pos];
+    }
+
+
+    public void setPos(int pos, int value) {   //给某下标的值赋一个值
+        datas[pos] = value;
+    }
+
+    public void remove(int toRemove) {   //删除第一次出现的值(也就是toRemove)
+        int pos = search(toRemove);   //先找到要删的这个值的下标
+        if(pos == -1) {    //也就是没找到,这点要是看不明白就返回search方法看
+            return;
+        }
+
+        if(pos == size - 1){   //删尾
+            size--;
+            return;
+        }
+
+        //普通删去
+        for(int i = pos;i < size - 1; i++) {  //从要删的那个的后一个开始一个一个往前移
+            datas[i] = datas[i + 1];
+        }
+        size--;
+    }
+
+    public void clear() {
+        size = 0;
+    }
+
+
+
 }

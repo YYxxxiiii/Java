@@ -3,7 +3,9 @@ package Java_01016;
 public class Test {
     public static void main(String[] args) {
         //textAdd();
-        textContains();
+        //textContains();
+        textSearch();
+        //textRemove();
     }
 
     private static void textAdd(){
@@ -24,4 +26,23 @@ public class Test {
         System.out.println(seqList.contains(2));
 
     }
+    private static void textSearch() {
+        SeqList seqList = new SeqList();
+        seqList.add(0, 2);
+        seqList.add(0, 3);
+        seqList.add(0, 5);
+        seqList.add(1, 6);
+        System.out.println(seqList.search(3));
+    }
+
+    private static void textRemove() {
+        SeqList seqList = new SeqList();
+        seqList.add(0, 2);
+        seqList.add(0, 3);
+        seqList.add(0, 5);
+        seqList.add(0, 6);
+        seqList.remove(3);
+        seqList.display();
+    }
+
 }
