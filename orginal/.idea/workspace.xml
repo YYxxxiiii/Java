@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="0d76dabc-1461-4058-92cf-41ff56187547" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1Vf4DkhIyO9EYIpSWsIqJHauULR" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="fengle" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Add">
+    <configuration name="Add" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Java_0117.Add" />
+      <module name="orginal" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Java_0117.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Bubble" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Java_0114.Bubble" />
+      <module name="orginal" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Java_0114.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LinkedText" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Java_0116.LinkedText" />
+      <module name="orginal" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Java_0116.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Reverse" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Java_0114.Reverse" />
+      <module name="orginal" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Java_0114.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Text" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Java_0115.Text" />
+      <module name="orginal" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Java_0115.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Add" />
+        <item itemvalue="Application.LinkedText" />
+        <item itemvalue="Application.Text" />
+        <item itemvalue="Application.Reverse" />
+        <item itemvalue="Application.Bubble" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0d76dabc-1461-4058-92cf-41ff56187547" name="Default Changelist" comment="" />
+      <created>1577630697891</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1577630697891</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="0" y="0" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1577633802801">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="0" y="0" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1577633802801" />
+    <state x="520" y="114" key="#com.intellij.ide.util.MemberChooser" timestamp="1579248436920">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="520" y="114" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1579248436920" />
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1578549633977">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1578549633977" />
+    <state x="475" y="55" key="FileChooserDialogImpl" timestamp="1577634017243">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="475" y="55" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1577634017243" />
+    <state width="1493" height="284" key="GridCell.Tab.0.bottom" timestamp="1579273565136">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="284" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1579273565136" />
+    <state width="1493" height="284" key="GridCell.Tab.0.center" timestamp="1579273565136">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="284" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1579273565136" />
+    <state width="1493" height="284" key="GridCell.Tab.0.left" timestamp="1579273565135">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="284" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1579273565135" />
+    <state width="1493" height="284" key="GridCell.Tab.0.right" timestamp="1579273565136">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="284" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1579273565136" />
+    <state width="1493" height="284" key="GridCell.Tab.1.bottom" timestamp="1579273565136">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="284" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1579273565136" />
+    <state width="1493" height="284" key="GridCell.Tab.1.center" timestamp="1579273565136">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="284" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1579273565136" />
+    <state width="1493" height="284" key="GridCell.Tab.1.left" timestamp="1579273565136">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="284" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1579273565136" />
+    <state width="1493" height="284" key="GridCell.Tab.1.right" timestamp="1579273565136">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="284" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1579273565136" />
+    <state x="270" y="55" key="SettingsEditor" timestamp="1578312700724">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="270" y="55" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1578312700724" />
+    <state x="490" y="154" width="561" height="524" key="StructurePopup" timestamp="1578313551491">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="490" y="154" width="561" height="524" key="StructurePopup/0.0.1536.824@0.0.1536.824" timestamp="1578313551491" />
+    <state x="352" y="161" key="caller.chooser.dialog" timestamp="1578469144413">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="352" y="161" key="caller.chooser.dialog/0.0.1536.824@0.0.1536.824" timestamp="1578469144413" />
+    <state x="565" y="190" key="chooseDestDirectoryDialog" timestamp="1578149366390">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="565" y="190" key="chooseDestDirectoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1578149366390" />
+    <state x="449" y="237" key="com.intellij.ide.util.TipDialog" timestamp="1579525373883">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="449" y="237" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1579525373883" />
+    <state x="425" y="187" key="run.anything.popup" timestamp="1578467940700">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1578467940700" />
+    <state x="225" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1579076132944">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="225" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1579076132944" />
+    <state x="491" y="324" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1577633817944">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="491" y="324" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/0.0.1536.824@0.0.1536.824" timestamp="1577633817944" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="seqList" />
+      </configuration>
+    </watches-manager>
+  </component>
+</project>

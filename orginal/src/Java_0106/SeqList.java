@@ -1,0 +1,113 @@
+package Java_0106;
+
+public class SeqList {
+    private int[] datas = new int[100]; //一个叫datas的内存有 100 的空间
+    private int size = 0;  //把存在datas里的叫size,期初是空的 ,所以 = 0
+
+    public int getSize() {
+        return size; //这里的size只能get,不能set,因为size是通过之后顺序表的增删来修改的,所以这里不能乱动
+        //这个getSize的原因就是:上面的size是private,而下面这个代码(display)我要使用它,
+        // 因为它是私有的所以我不能直接使用它,所以得用get这个方法
+    }
+
+    public void display() {
+        //打印顺序表
+        //依次打印出来,打印就相当于数组里的数组转为字符串
+        //形如:[1,2,3,4,5]
+        String ret = "[";
+        for (int i = 0; i < size; i++) {
+            ret += datas[i];
+            if(i < size - 1){
+                ret += ",";
+            }
+        }
+        ret += "]";
+        System.out.println(ret);
+    }
+    //这个方法呢就是为了我之后写的这些方法写好之后,我要对他进行测试看他O不OK,方便把数组打印出来
+
+
+    //在pos位置add data(此data,不是内存datas)
+    //pos是我要插入的这个数的位置,也就是下标;
+    //data是插入的这个数的值
+    public void add(int pos, int data) {
+        //首先要关注pos的有效性
+        if(pos < 0 || pos > size){
+            return;
+        }
+        if(size >= datas.length){  //这个时候就需要扩容了
+            int[] newDatas = new int[datas.length * 2];   //一般扩容都是在原基础上 * 2
+            for (int i = 0; i < datas.length ; i++) {
+                newDatas[i] = datas[i];
+            }
+            datas = newDatas;     //扩容后任然叫回原来的名字
+        }
+        //现在开始正式的add
+        //1.尾插的情况
+        if(pos == size){
+            datas[pos] = data;
+            size++;
+            return;
+        }
+        //2.普通位置的插入
+        //插入到pos后,pos后的数据依次向后移
+        for (int i = size - 1;i >= pos;i--) {  //注意此处for循环的内部,顺序表的后移,是从最后一个数开始的,记得画图
+            datas[i + 1] = datas[i];
+        }
+        datas[pos] = data;
+        size++;
+    }
+    public boolean contains(int toFind) {
+        // 循环访问每个元素并进行比较.
+        // 如果发现某个元素和 toFind 相等, 就找到了, 返回 true
+        // 如果所有元素都找完了, 也没找到相等的, 就返回 false
+        for (int i = 0; i < size; i++) {
+            if (datas[i] == toFind) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public int search(int toFind) {  //某个元素的下标
+        for (int i = 0; i < size; i++) {
+            if(datas[i] == toFind){
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    public int getPos(int pos) {  //某下标下的数的值
+        return datas[pos];
+    }
+
+
+    public void setPos(int pos, int value) {   //给某下标的值赋一个值
+        datas[pos] = value;
+    }
+
+    public void remove(int toRemove) {   //删除第一次出现的值(也就是toRemove)
+        int pos = search(toRemove);   //先找到要删的这个值的下标
+        if(pos == -1) {    //也就是没找到,这点要是看不明白就返回search方法看
+            return;
+        }
+
+        if(pos == size - 1){   //删尾
+            size--;
+            return;
+        }
+
+        //普通删去
+        for(int i = pos;i < size - 1; i++) {  //从要删的那个的后一个开始一个一个往前移
+            datas[i] = datas[i + 1];
+        }
+        size--;
+    }
+
+    public void clear() {
+        size = 0;
+    }
+
+
+}
