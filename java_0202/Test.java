@@ -1,4 +1,3 @@
-package java15_0105;
 
 public class Test {
     private static void testAdd() {

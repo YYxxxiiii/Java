@@ -1,4 +1,3 @@
-package java15_0105;
 
 public class ArrayTest {
     public static void bubbleSort(int[] arr) {//升序排序

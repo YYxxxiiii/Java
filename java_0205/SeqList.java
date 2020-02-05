@@ -1,5 +1,4 @@
 
-
 public class SeqList {
     private int[] datas = new int[100];
     private int size = 0;

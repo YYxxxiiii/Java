@@ -1,4 +1,3 @@
-package java15_0105;
 
 public class TestLinkedList {
     private static void testAddFirst() {

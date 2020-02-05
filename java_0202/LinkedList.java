@@ -1,4 +1,3 @@
-package java15_0105;
 
 // 一个节点
 class Node {
