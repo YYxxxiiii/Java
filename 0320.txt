@@ -1,0 +1,52 @@
+import java.util.Scanner;
+
+public class Text{
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        int x = scan.nextInt();
+        System.out.println(fac(x));
+    }
+    public static int fac(int x){
+        if(x == 1){
+            return 1;
+        }
+        return x * fac(x-1);
+    }
+}
+
+
+
+
+import java.util.Scanner;
+
+public class Text {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        int x = scan.nextInt();
+        print(x);
+
+    }
+    public static void print(int x) {
+        if (x > 9) {
+            print(x / 10);
+        }
+        System.out.print(x % 10 + " ");
+    }
+
+}
+
+
+public class Text{
+    public static void main(String[] args){
+        sum(10);
+        System.out.println(sum(10));
+
+    }
+    public static int sum(int x){
+        int result = 0;
+        for(int i = 1;i <= x;i++){
+            result += i;
+        }
+        return result;
+    }
+}
