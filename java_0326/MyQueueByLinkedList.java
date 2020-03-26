@@ -12,14 +12,9 @@ public class MyQueueByLinkedList {
         }
     }
 
-    // 创建一个链表, 就得有头结点. 此处 head 节点不是傀儡节点
-    // 基于链表来实现队列, 可以入队列从尾部插入, 出队列从头部删除; 也可以如队列从头部插入, 出队列从尾部删除
-    // 无论是那种实现方式, 最好都把头和尾都记录下来.
     private Node head = null;
     private Node tail = null;
 
-    // 此处我按照尾部入队列, 头部出队列的方式实现
-    // 入队列(标准库中的队列, 入队列操作就叫 offer)
     public void offer(int val) {
         Node newNode = new Node(val);
         if (head == null) {
@@ -34,9 +29,7 @@ public class MyQueueByLinkedList {
 
     // 出队列
     public Integer poll() {
-        // 如果当前队列就是空队列, 再去 poll 显然不科学
         if (head == null) {
-            // 如果出队列失败, 返回一个错误值
             return null;
         }
         int ret = head.val;
