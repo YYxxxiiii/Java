@@ -68,6 +68,7 @@ public class InterviewTree {
     public List<List<Integer>> levelOrder(TreeNode root) {
         // 此处由于要把每一层的节点放到一个单独的 List 中. 所以之前的层序遍历方式就不太行了.
         // 此处还是基于递归的方式来解决这个问题
+        result.clear();//注意这个 一定要加上
         if (root == null) {
             return result;
         }
