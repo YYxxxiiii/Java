@@ -1,0 +1,455 @@
+Enter password: **********
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 10
+Server version: 5.7.27-log MySQL Community Server (GPL)
+
+Copyright (c) 2000, 2019, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| java0424           |
+| javahh             |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+6 rows in set (0.01 sec)
+
+mysql> ues java0424;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ues java0424' at line 1
+mysql> use java0424;
+Database changed
+mysql> select * from exan_resule;
+ERROR 1146 (42S02): Table 'java0424.exan_resule' doesn't exist
+mysql> select * from exam_resule;
++------+-------------+---------+------+---------+
+| id   | name        | chinese | math | english |
++------+-------------+---------+------+---------+
+|    1 | tangsanzang |    34.0 | 56.0 |    78.5 |
+|    2 | sunwukong   |    65.0 | 73.0 |    54.0 |
+|    3 | zhubajie    |    22.0 | 86.0 |    94.0 |
+|    4 | caocao      |    89.0 | 96.0 |    94.0 |
+|    5 | liubei      |    23.0 | 45.0 |    78.5 |
+|    6 | sunquan     |    67.0 | 85.0 |    92.0 |
+|    7 | zhugeliang  |    67.0 | 24.0 |    98.0 |
++------+-------------+---------+------+---------+
+7 rows in set (0.01 sec)
+
+mysql> select name,chinese from exam_resule where chinese between 80 and 90;
++--------+---------+
+| name   | chinese |
++--------+---------+
+| caocao |    89.0 |
++--------+---------+
+1 row in set (0.00 sec)
+
+mysql> select name,chinese from exam_resule whee chinese >= 80 and chinese <= 90;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'chinese >= 80 and chinese <= 90' at line 1
+mysql> select name,chinese from exam_resule where chinese >= 80 and chinese <= 90;
++--------+---------+
+| name   | chinese |
++--------+---------+
+| caocao |    89.0 |
++--------+---------+
+1 row in set (0.00 sec)
+
+mysql> select name,math from exam_resule where math between 60 and 80;
++-----------+------+
+| name      | math |
++-----------+------+
+| sunwukong | 73.0 |
++-----------+------+
+1 row in set (0.00 sec)
+
+mysql> select id,name,math from exam_resule where math in (50,60,70,80);
+Empty set (0.00 sec)
+
+mysql> select id,name,math from exam_resule where math in (50,60,73,80);
++------+-----------+------+
+| id   | name      | math |
++------+-----------+------+
+|    2 | sunwukong | 73.0 |
++------+-----------+------+
+1 row in set (0.00 sec)
+
+mysql> select id,name,math from exam_resule where math = 50 or math = 73;
++------+-----------+------+
+| id   | name      | math |
++------+-----------+------+
+|    2 | sunwukong | 73.0 |
++------+-----------+------+
+1 row in set (0.00 sec)
+
+mysql> select * from exam_resule;
++------+-------------+---------+------+---------+
+| id   | name        | chinese | math | english |
++------+-------------+---------+------+---------+
+|    1 | tangsanzang |    34.0 | 56.0 |    78.5 |
+|    2 | sunwukong   |    65.0 | 73.0 |    54.0 |
+|    3 | zhubajie    |    22.0 | 86.0 |    94.0 |
+|    4 | caocao      |    89.0 | 96.0 |    94.0 |
+|    5 | liubei      |    23.0 | 45.0 |    78.5 |
+|    6 | sunquan     |    67.0 | 85.0 |    92.0 |
+|    7 | zhugeliang  |    67.0 | 24.0 |    98.0 |
++------+-------------+---------+------+---------+
+7 rows in set (0.00 sec)
+
+mysql> select * from exam_resule where name like 'zhu%';
++------+------------+---------+------+---------+
+| id   | name       | chinese | math | english |
++------+------------+---------+------+---------+
+|    3 | zhubajie   |    22.0 | 86.0 |    94.0 |
+|    7 | zhugeliang |    67.0 | 24.0 |    98.0 |
++------+------------+---------+------+---------+
+2 rows in set (0.01 sec)
+
+mysql> select * from exam_resule where math like "3%";
+Empty set (0.00 sec)
+
+mysql> select * from exam_resule where math like 23%";
+    ">
+    "> ^C
+mysql> select * from exam_resule where math like "2%";
++------+------------+---------+------+---------+
+| id   | name       | chinese | math | english |
++------+------------+---------+------+---------+
+|    7 | zhugeliang |    67.0 | 24.0 |    98.0 |
++------+------------+---------+------+---------+
+1 row in set (0.00 sec)
+
+mysql> select * from exam_resule;
++------+-------------+---------+------+---------+
+| id   | name        | chinese | math | english |
++------+-------------+---------+------+---------+
+|    1 | tangsanzang |    34.0 | 56.0 |    78.5 |
+|    2 | sunwukong   |    65.0 | 73.0 |    54.0 |
+|    3 | zhubajie    |    22.0 | 86.0 |    94.0 |
+|    4 | caocao      |    89.0 | 96.0 |    94.0 |
+|    5 | liubei      |    23.0 | 45.0 |    78.5 |
+|    6 | sunquan     |    67.0 | 85.0 |    92.0 |
+|    7 | zhugeliang  |    67.0 | 24.0 |    98.0 |
++------+-------------+---------+------+---------+
+7 rows in set (0.00 sec)
+
+mysql> select * from exam_resule where english '%4';
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''%4'' at line 1
+mysql> select * from exam_resule where english '%4%';
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''%4%'' at line 1
+mysql> select * from exam_resule where english "%4%";
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '"%4%"' at line 1
+mysql> select * from exam_resule where english like "%4%";
++------+-----------+---------+------+---------+
+| id   | name      | chinese | math | english |
++------+-----------+---------+------+---------+
+|    2 | sunwukong |    65.0 | 73.0 |    54.0 |
+|    3 | zhubajie  |    22.0 | 86.0 |    94.0 |
+|    4 | caocao    |    89.0 | 96.0 |    94.0 |
++------+-----------+---------+------+---------+
+3 rows in set (0.00 sec)
+
+mysql> select * from exam_resule where english like "%4";
+Empty set (0.00 sec)
+
+mysql> select * from exam_resule where english like "%4%";
++------+-----------+---------+------+---------+
+| id   | name      | chinese | math | english |
++------+-----------+---------+------+---------+
+|    2 | sunwukong |    65.0 | 73.0 |    54.0 |
+|    3 | zhubajie  |    22.0 | 86.0 |    94.0 |
+|    4 | caocao    |    89.0 | 96.0 |    94.0 |
++------+-----------+---------+------+---------+
+3 rows in set (0.00 sec)
+
+mysql> select * from exam_resule where chinese not null;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'null' at line 1
+mysql> select * from exam_resule where chinese is not Null;
++------+-------------+---------+------+---------+
+| id   | name        | chinese | math | english |
++------+-------------+---------+------+---------+
+|    1 | tangsanzang |    34.0 | 56.0 |    78.5 |
+|    2 | sunwukong   |    65.0 | 73.0 |    54.0 |
+|    3 | zhubajie    |    22.0 | 86.0 |    94.0 |
+|    4 | caocao      |    89.0 | 96.0 |    94.0 |
+|    5 | liubei      |    23.0 | 45.0 |    78.5 |
+|    6 | sunquan     |    67.0 | 85.0 |    92.0 |
+|    7 | zhugeliang  |    67.0 | 24.0 |    98.0 |
++------+-------------+---------+------+---------+
+7 rows in set (0.00 sec)
+
+mysql> select * from exam_resule limit 4;
++------+-------------+---------+------+---------+
+| id   | name        | chinese | math | english |
++------+-------------+---------+------+---------+
+|    1 | tangsanzang |    34.0 | 56.0 |    78.5 |
+|    2 | sunwukong   |    65.0 | 73.0 |    54.0 |
+|    3 | zhubajie    |    22.0 | 86.0 |    94.0 |
+|    4 | caocao      |    89.0 | 96.0 |    94.0 |
++------+-------------+---------+------+---------+
+4 rows in set (0.00 sec)
+
+mysql> select * from exam_resule limit 4 offset 4;
++------+------------+---------+------+---------+
+| id   | name       | chinese | math | english |
++------+------------+---------+------+---------+
+|    5 | liubei     |    23.0 | 45.0 |    78.5 |
+|    6 | sunquan    |    67.0 | 85.0 |    92.0 |
+|    7 | zhugeliang |    67.0 | 24.0 |    98.0 |
++------+------------+---------+------+---------+
+3 rows in set (0.00 sec)
+
+mysql> select * from exam_resule limit 4 offset 0;
++------+-------------+---------+------+---------+
+| id   | name        | chinese | math | english |
++------+-------------+---------+------+---------+
+|    1 | tangsanzang |    34.0 | 56.0 |    78.5 |
+|    2 | sunwukong   |    65.0 | 73.0 |    54.0 |
+|    3 | zhubajie    |    22.0 | 86.0 |    94.0 |
+|    4 | caocao      |    89.0 | 96.0 |    94.0 |
++------+-------------+---------+------+---------+
+4 rows in set (0.00 sec)
+
+mysql> select * from exam_resule;
++------+-------------+---------+------+---------+
+| id   | name        | chinese | math | english |
++------+-------------+---------+------+---------+
+|    1 | tangsanzang |    34.0 | 56.0 |    78.5 |
+|    2 | sunwukong   |    65.0 | 73.0 |    54.0 |
+|    3 | zhubajie    |    22.0 | 86.0 |    94.0 |
+|    4 | caocao      |    89.0 | 96.0 |    94.0 |
+|    5 | liubei      |    23.0 | 45.0 |    78.5 |
+|    6 | sunquan     |    67.0 | 85.0 |    92.0 |
+|    7 | zhugeliang  |    67.0 | 24.0 |    98.0 |
++------+-------------+---------+------+---------+
+7 rows in set (0.00 sec)
+
+mysql> update exam_result set chinese=20,math=80 where name like "zhu%";
+ERROR 1146 (42S02): Table 'java0424.exam_result' doesn't exist
+mysql> update exam_result set chinese=20,math=80 where name ="tangsanzang";
+ERROR 1146 (42S02): Table 'java0424.exam_result' doesn't exist
+mysql> update exam_resule set chinese=20,math=80 where name like "zhu%";
+Query OK, 2 rows affected (0.19 sec)
+Rows matched: 2  Changed: 2  Warnings: 0
+
+mysql> select * from exam_resule order by math+english+chinese;
++------+-------------+---------+------+---------+
+| id   | name        | chinese | math | english |
++------+-------------+---------+------+---------+
+|    5 | liubei      |    23.0 | 45.0 |    78.5 |
+|    1 | tangsanzang |    34.0 | 56.0 |    78.5 |
+|    2 | sunwukong   |    65.0 | 73.0 |    54.0 |
+|    3 | zhubajie    |    20.0 | 80.0 |    94.0 |
+|    7 | zhugeliang  |    20.0 | 80.0 |    98.0 |
+|    6 | sunquan     |    67.0 | 85.0 |    92.0 |
+|    4 | caocao      |    89.0 | 96.0 |    94.0 |
++------+-------------+---------+------+---------+
+7 rows in set (0.11 sec)
+
+mysql> update exam_resule math = math + 30 order by chinese+math+english limit 3;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= math + 30 order by chinese+math+english limit 3' at line 1
+mysql> update exam_resule set math = math + 30 order by chinese+math+english limit 3;
+ERROR 1264 (22003): Out of range value for column 'math' at row 3
+mysql> update exam_resule set chinese =chinese + 30 order by chinese+math+english limit 3;
+Query OK, 3 rows affected (0.00 sec)
+Rows matched: 3  Changed: 3  Warnings: 0
+
+mysql> select * from exam_resule order by math+english+chinese;
++------+-------------+---------+------+---------+
+| id   | name        | chinese | math | english |
++------+-------------+---------+------+---------+
+|    5 | liubei      |    53.0 | 45.0 |    78.5 |
+|    3 | zhubajie    |    20.0 | 80.0 |    94.0 |
+|    7 | zhugeliang  |    20.0 | 80.0 |    98.0 |
+|    1 | tangsanzang |    64.0 | 56.0 |    78.5 |
+|    2 | sunwukong   |    95.0 | 73.0 |    54.0 |
+|    6 | sunquan     |    67.0 | 85.0 |    92.0 |
+|    4 | caocao      |    89.0 | 96.0 |    94.0 |
++------+-------------+---------+------+---------+
+7 rows in set (0.00 sec)
+
+mysql> update exam_resule set chinese = chinese / 2;
+Query OK, 7 rows affected (0.11 sec)
+Rows matched: 7  Changed: 7  Warnings: 0
+
+mysql> select * from exam_resule;
++------+-------------+---------+------+---------+
+| id   | name        | chinese | math | english |
++------+-------------+---------+------+---------+
+|    1 | tangsanzang |    32.0 | 56.0 |    78.5 |
+|    2 | sunwukong   |    47.5 | 73.0 |    54.0 |
+|    3 | zhubajie    |    10.0 | 80.0 |    94.0 |
+|    4 | caocao      |    44.5 | 96.0 |    94.0 |
+|    5 | liubei      |    26.5 | 45.0 |    78.5 |
+|    6 | sunquan     |    33.5 | 85.0 |    92.0 |
+|    7 | zhugeliang  |    10.0 | 80.0 |    98.0 |
++------+-------------+---------+------+---------+
+7 rows in set (0.00 sec)
+
+mysql> delete from exam_resule where name = "tangsanzang";
+Query OK, 1 row affected (0.12 sec)
+
+mysql> select * from exam_reslue;
+ERROR 1146 (42S02): Table 'java0424.exam_reslue' doesn't exist
+mysql> select * from exam_resule;
++------+------------+---------+------+---------+
+| id   | name       | chinese | math | english |
++------+------------+---------+------+---------+
+|    2 | sunwukong  |    47.5 | 73.0 |    54.0 |
+|    3 | zhubajie   |    10.0 | 80.0 |    94.0 |
+|    4 | caocao     |    44.5 | 96.0 |    94.0 |
+|    5 | liubei     |    26.5 | 45.0 |    78.5 |
+|    6 | sunquan    |    33.5 | 85.0 |    92.0 |
+|    7 | zhugeliang |    10.0 | 80.0 |    98.0 |
++------+------------+---------+------+---------+
+6 rows in set (0.00 sec)
+
+mysql> create table student (
+    ->     id int not null,
+    ->     name varchar(20),
+    ->     mail varchar(30)
+    -> );
+Query OK, 0 rows affected (0.19 sec)
+
+mysql> insert into student values(null,'hah',11@qq.com);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '@qq.com)' at line 1
+mysql> insert into student values(null,'hah','11@qq.com');
+ERROR 1048 (23000): Column 'id' cannot be null
+mysql> drop table student;
+Query OK, 0 rows affected (0.03 sec)
+
+mysql> create table student (id int unique,name varchar(20));
+Query OK, 0 rows affected (0.38 sec)
+
+mysql> desc student;
++-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| id    | int(11)     | YES  | UNI | NULL    |       |
+| name  | varchar(20) | YES  |     | NULL    |       |
++-------+-------------+------+-----+---------+-------+
+2 rows in set (0.12 sec)
+
+mysql> insert into student values (1,"heh");
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into student values (1,"heh");
+ERROR 1062 (23000): Duplicate entry '1' for key 'id'
+mysql> insert into student values (2,"heh");
+Query OK, 1 row affected (0.00 sec)
+
+mysql> delete from student where id = 2;
+Query OK, 1 row affected (0.01 sec)
+
+mysql> desc table student;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'table student' at line 1
+mysql> desc student;
++-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| id    | int(11)     | YES  | UNI | NULL    |       |
+| name  | varchar(20) | YES  |     | NULL    |       |
++-------+-------------+------+-----+---------+-------+
+2 rows in set (0.00 sec)
+
+mysql> seletc * from student;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'seletc * from student' at line 1
+mysql> select * from student;
++------+------+
+| id   | name |
++------+------+
+|    1 | heh  |
++------+------+
+1 row in set (0.00 sec)
+
+mysql> insert into student value (1,"haha");
+ERROR 1062 (23000): Duplicate entry '1' for key 'id'
+mysql> drop table student;
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> create table student (id int,name varchar(20) default "unknow");
+Query OK, 0 rows affected (0.03 sec)
+
+mysql> desc student;
++-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| id    | int(11)     | YES  |     | NULL    |       |
+| name  | varchar(20) | YES  |     | unknow  |       |
++-------+-------------+------+-----+---------+-------+
+2 rows in set (0.00 sec)
+
+mysql> insert into student value (1,"aa");
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into student (id) value (2);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from student;
++------+--------+
+| id   | name   |
++------+--------+
+|    1 | aa     |
+|    2 | unknow |
++------+--------+
+2 rows in set (0.00 sec)
+
+mysql> drop table student;
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> create table student (id int primary key,name varchar(20));
+Query OK, 0 rows affected (0.03 sec)
+
+mysql> desc student;
++-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| id    | int(11)     | NO   | PRI | NULL    |       |
+| name  | varchar(20) | YES  |     | NULL    |       |
++-------+-------------+------+-----+---------+-------+
+2 rows in set (0.00 sec)
+
+mysql> insert into student values (null,"hhe");
+ERROR 1048 (23000): Column 'id' cannot be null
+mysql> insert into student values (1,"hhe");
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into student values (1,"aahhe");
+ERROR 1062 (23000): Duplicate entry '1' for key 'PRIMARY'
+mysql> drop student;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'student' at line 1
+mysql> drop table student;
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> create table class (id int primary key,name varchar(20));
+Query OK, 0 rows affected (0.13 sec)
+
+mysql> desc class;
++-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| id    | int(11)     | NO   | PRI | NULL    |       |
+| name  | varchar(20) | YES  |     | NULL    |       |
++-------+-------------+------+-----+---------+-------+
+2 rows in set (0.01 sec)
+
+mysql> create table student (id int primary key,class_id int,foreign key (class_id) references class(id);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+mysql> create table student (id int primary key,class_id int,foreign key (class_id) references class(id);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+mysql> create table student (id int primary key,class_id int,foreign key (class_id) references class(id));
+Query OK, 0 rows affected (0.03 sec)
+
+mysql> insert into class values (1,'java15');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into class values (1,5);
+ERROR 1062 (23000): Duplicate entry '1' for key 'PRIMARY'
+mysql>
