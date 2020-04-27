@@ -46,6 +46,7 @@ public class MyQueueByLinkedList {
         if (head == null) {
             tail = null;
         }
+        return ret;
     }
     //取队首元素
     public Integer peek() {
