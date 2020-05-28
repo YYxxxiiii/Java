@@ -42,11 +42,11 @@ public class ThreadVsThreadPool {
 //                        return new Thread(r);
 //                    }
 //                },
-                //拒绝策略：接收到新快递单，但此时仓库的容量不够存放快递包裹
-//                new ThreadPoolExecutor.AbortPolicy()
-//                new ThreadPoolExecutor.CallerRunsPolicy()
-//                new ThreadPoolExecutor.DiscardOldestPolicy()
-                new ThreadPoolExecutor.DiscardPolicy()
+                //拒绝策略：接收到新快递单，但此时仓库的容量不够存放快递包裹 (超过仓库容量,再有新的快递任务时,提供了拒绝策略)
+//                new ThreadPoolExecutor.AbortPolicy() 抛异常的方式:RejectedExecutionException
+//                new ThreadPoolExecutor.CallerRunsPolicy() 谁把包裹交给我的,让他自己取送(execute代码行所在线程自己执行)
+//                new ThreadPoolExecutor.DiscardOldestPolicy() 把仓库中最旧的包裹丢掉
+                new ThreadPoolExecutor.DiscardPolicy() //把仓库中最新的包裹丢掉
         );
         pool.execute(()->{//创建了一个送快递的任务，把快递包裹交给快递公司
             System.out.println("送快递到北京");
